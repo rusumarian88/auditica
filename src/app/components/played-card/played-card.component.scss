@@ -1,0 +1,86 @@
+
+.card{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
+    cursor: pointer;
+    color: rgba(122, 133, 128, 1);
+    &.card:hover{
+        color: red;
+    }
+}
+
+.bar{
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    height: 1px;
+    width: 93%;
+    border-bottom:1px solid rgba(49, 53, 51, 1);
+    margin-top: 8px;
+}
+
+.photo{
+    width:30px;
+    height: 30px;
+    background-image: url("/assets/song image.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-song{
+    display: inline-block;
+    font-size: 12px;
+}
+
+.title-song.white{
+    display: block;
+    color:rgba(250, 250, 250, 1) ;
+    &.title-song.white:hover{
+        color: red;
+    }
+}
+
+.nr,.type,.time{
+    font-size: 10px;
+}
+
+.artist{
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 150px;
+}
+
+.artist.white{
+    display: block;
+    color:rgba(175, 182, 178, 1);
+    margin-left: 0;
+    &.artist.white:hover{
+        color: red;
+    }
+}
+
+.time{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon{
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 10px;
+}

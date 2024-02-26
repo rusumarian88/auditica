@@ -1,0 +1,49 @@
+<div class="content-page">
+    <div class="top">
+        <app-nav-bar class="nav-bar"></app-nav-bar>
+        <div class="right">
+            <div class="center">
+                <app-heder class="heder"></app-heder>
+                <app-section-with-title [btnPlay]="true" [seeMore]="true" title="New Releases" btn="See more">
+                    <div class="releases-cards">
+                        <app-releases-card *ngFor="let r of releasesService.releases" [photo]="r.photo" [title]="r.title" [subtitle]="r.subtitle" class="rel-card"></app-releases-card>
+                    </div>
+                    </app-section-with-title>
+                <app-section-with-title [seeMore]="true" title="You May Like" btn="See more">
+                    <div class="like-cards">
+                        <app-like-card *ngFor="let l of likeService.likes" [photo]="l.photo" [title]="l.title" [name]="l.name"></app-like-card>
+                    </div>
+                </app-section-with-title>
+                <app-section-with-title [btnPause]="true" title="Recently Played">
+                    <div class="played-cards">
+                        <app-played-card [songType]="true" [menu]="true" *ngFor="let p of playedService.played" [nr]="p.nr" [photo]="p.photo" [titleSong]="p.titleSong" [artist]="p.artist" [type]="p.type" [time]="p.time"></app-played-card>
+                    </div>
+                </app-section-with-title>
+            </div>
+            <div class="categories">
+                <div class="section">
+                    <div class="title-section">
+                        <div class="title">Top Streams Real-time</div>
+                        <div class="buttons">
+                            <div class="btn selected">Local</div>
+                            <div class="btn">Global</div>
+                        </div>
+                    </div>
+                    <div class="playeds">
+                        <app-played-card [columnWhite]="true" [menuSecond]="true" [bar]="true" *ngFor="let p of streamsService.streams" [nr]="p.nr" [photo]="p.photo" [titleSong]="p.titleSong" [artist]="p.artist" [type]="p.type" [time]="p.time"></app-played-card>
+                    </div>
+                        <div class="button">
+                        <div class="text">Expand</div>
+                        <span class="material-symbols-outlined icon"> expand_more</span>
+                    </div>
+                </div>
+                <app-section-with-title [seeMore]="true" title="Categories" btn="See all">
+                    <div class="photos">
+                        <div  *ngFor="let p of photos"  [ngStyle]="{'background-image':'url('+p+')'}" class="photo"></div>
+                    </div>
+                </app-section-with-title>
+            </div>
+        </div>
+    </div>
+    <app-playing-bar class="playing-bar"></app-playing-bar>
+</div>

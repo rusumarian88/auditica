@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="title">
+        <div class="nr">{{nr}}</div>
+        <div [ngStyle]="{'background-image':'url('+photo+')'}" class="photo"></div>
+        <div>
+            <div [ngClass]="{white:columnWhite}" class="title-song">{{titleSong}}</div>
+            <div [ngClass]="{white:columnWhite}" class="artist">{{artist}}</div>
+        </div>
+    </div>
+    <div *ngIf="songType" class="type">{{type}}</div>
+    <div>
+        <div class="time">{{time}}</div>
+        <span class="material-symbols-outlined icon">favorite</span>
+        <span *ngIf="menu" class="material-symbols-outlined icon">drag_handle</span>
+        <span *ngIf="menuSecond" class="material-symbols-outlined icon">more_horiz</span>
+    </div>
+    <div *ngIf="bar" class="bar"></div>
+</div>

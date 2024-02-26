@@ -1,0 +1,127 @@
+
+@import "mixins";
+@import "variables";
+
+:host{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items:stretch;
+    gap: 22px;
+    padding: 12px;
+    width: 100%;
+}
+
+.logo{
+    width: 120px;
+    margin-bottom:8px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 8px;
+    cursor: pointer;
+    &.menu-item:hover{
+        background-color:rgba(238, 73, 80, 1);
+    }
+    &.selected{
+        background-color:rgba(238, 73, 80, 1);
+    }
+}
+
+.icon{
+    height: 12px;
+}
+
+.text{
+    font-size:12px;
+    line-height: 1;
+    font-weight: 500;
+    color: rgba(250, 250, 250, 1);
+    &.text:hover{
+        font-weight: 700;
+    }
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap:12px;
+    width: 100%;
+}
+
+.name-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(250, 250, 250, 1);
+}
+
+.title{
+    font-size:16px;
+    line-height: 1;
+    font-weight: 700;
+    color: rgba(250, 250, 250, 1);
+    cursor: pointer;
+    &.title:hover{
+        color: rgb(10, 74, 236);
+    }
+}
+
+.more{
+    font-size: 20px;
+    cursor: pointer;
+    &.more:hover{
+        color: rgb(10, 74, 236);
+    }
+}
+
+.list-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: rgba(149, 157, 153, 1);;
+    &.list-item:hover{
+        color: rgba(243, 119, 125, 1);
+    }
+}
+
+.name{
+    font-size: 10px;
+}
+
+.equalizer{
+    font-size: 16px;
+}
+

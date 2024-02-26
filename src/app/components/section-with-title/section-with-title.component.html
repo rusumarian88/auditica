@@ -1,0 +1,11 @@
+<div class="section">
+    <div class="title-and-btns">
+        <div>
+        <div class="title">{{title}}</div>
+            <div *ngIf="btnPlay" class="btn-play"></div>
+            <div *ngIf="btnPause" class="btn-pause"></div>
+        </div>
+        <div *ngIf="seeMore" class="see-more">{{btn}}</div>
+    </div>
+    <ng-content></ng-content>
+</div>
